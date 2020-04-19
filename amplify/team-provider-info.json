@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lottery-dev-155457-authRole",
+            "UnauthRoleArn": "arn:aws:iam::584598963159:role/amplify-lottery-dev-155457-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::584598963159:role/amplify-lottery-dev-155457-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-lottery-dev-155457-deployment",
+            "UnauthRoleName": "amplify-lottery-dev-155457-unauthRole",
+            "StackName": "amplify-lottery-dev-155457",
+            "StackId": "arn:aws:cloudformation:us-west-2:584598963159:stack/amplify-lottery-dev-155457/cc0606f0-8290-11ea-978b-0aad1cb40640",
+            "AmplifyAppId": "d2uel0rdt12465"
+        }
+    }
+}
