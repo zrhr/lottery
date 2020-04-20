@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  Router,
+  Route
+} from 'react-router-dom'
 import './App.css';
+import Home from './Home'
+import {createBrowserHistory} from 'history'
+import Callback from './Callback'
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import { withAuthenticator } from 'aws-amplify-react';
+const history = createBrowserHistory();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [session, setSession]=React.useState({session:"", isLoggedIn:false})
+  return(
+  <Router history={history}>
+    <Route exact path= "/" render={(props)=><Home {...props} session={session}/> }/>
+    <Route exact path= "/callback" render={(props)=><Callback {...props} session={session}/>} />
+  </Router>
+  )
 }
 
-export default App;
+export default withAuthenticator(App, true);
