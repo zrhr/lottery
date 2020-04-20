@@ -7,8 +7,7 @@ import './App.css';
 import Home from './Home'
 import {createBrowserHistory} from 'history'
 import Callback from './Callback'
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
+
 import { withAuthenticator } from 'aws-amplify-react';
 const history = createBrowserHistory();
 
